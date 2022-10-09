@@ -1,0 +1,9 @@
+RewriteEngine On
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+RewriteRule ^$ index.php [L]
+RewriteRule ^login$ login-user.php [L]
+RewriteRule ^registration$ signup-user.php [L]
+RewriteRule ^forgotpassword$ forgot-password.php [L]
+Options All -Indexes
